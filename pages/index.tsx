@@ -38,8 +38,6 @@ const Home: NextPage = () => {
             <Head>
             <title> Simple title </title>
             </Head>
-            <h1>Hello world</h1>
-            <img src="/images/dcbxxl.png" alt="" />
             {
                 fetchedData?.map((product) =>
                 (

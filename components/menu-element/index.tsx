@@ -2,6 +2,7 @@ import React from "react"
 import s from "./styles.module.scss"
 import cn from "classnames"
 import { IProduct } from '@interfaces'
+import { Button } from "@components"
 
 export type IProps = {
     product: IProduct
@@ -9,9 +10,17 @@ export type IProps = {
 
 export default function MenuElement ({ product }: IProps) {
     return (
-        <section>
-            <h2>{product.title}</h2>
-            <p>{product.description}</p>
+        <section className={s.menu_element}>
+            <div className={s.element__content}>
+                <h2>{product.title}</h2>
+                <p>{product.description}</p>
+                <Button>
+                    En savoir plus
+                </Button>
+            </div>
+            <figure>
+                <img src={product.imgSrc} alt={product.title} />
+            </figure>
         </section>
     )
 }
