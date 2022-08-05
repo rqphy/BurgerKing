@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+            "title": "____",
+            "description": "Que demander de plus ? Deux viandes de boeuf grillées à la flamme, du fromage et du bacon … Simple, généreux et efficace.",
+            "imgSrc": "/images/dcbxxl.png"
+        },
+        {
+            "title": "Veggie STEAKHOUSE",
+            "description": "Le célèbre Steakhouse en version veggie : des oignons croustillants, de la sauce BBQ, du fromage, un haché végétal grillé à la flamme et même du bacon végétal LA VIE™. Même chaîne opératoire que les autres produits.",
+            "imgSrc": "/images/dcbxxl.png"
+        },
+        {
+            "title": "DOUBLE Whooper CHEESE",
+            "description": "Fan du WHOPPER® ? Vous allez adorer sa version grande taille ! Deux savoureuses viandes de boeuf grillées à la flamme et une délicieuse tranche de fromage.",
+            "imgSrc": "/images/dcbxxl.png"
+        },
+        {
+            "title": "BIG KING XL",
+            "description": "Extra-extra-large ! L'inimitable sauce BIG KING®, deux viandes de boeuf grillées à la flamme et deux délicieuses tranches de fromage. Une icône de taille. ",
+            "imgSrc": "/images/dcbxxl.png"
+        },
+        {
+            "title": "Double Steakhouse",
+            "description": "Une nouvelle star est née ! Deux viandes de boeuf grillées à la flamme, du bacon, des oignons croustillants et une délicieuse sauce barbecue pour une double dose de plaisir. ",
+            "imgSrc": "/images/dcbxxl.png"
+        }
+    ]
+}
