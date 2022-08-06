@@ -14,9 +14,11 @@ export default function MenuElement ({ product }: IProps) {
             <div className={s.element__content}>
                 <h2>{product.title}</h2>
                 <p>{product.description}</p>
-                <Button link={product.link}>
-                    En savoir plus
-                </Button>
+                <div className={s.button}>
+                    <Button link={product.link}>
+                        En savoir plus
+                    </Button>
+                </div>
             </div>
             <figure>
                 <img src={product.imgSrc} alt={product.title} />
