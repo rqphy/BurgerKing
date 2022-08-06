@@ -3,11 +3,16 @@ import s from "./styles.module.scss"
 import cn from "classnames"
 
 export type IProps = {
-    children: React.ReactNode
+    children: React.ReactNode,
+    link: string
 }
 
-export default function Button ({ children }: IProps) {
+export default function Button ({ children, link }: IProps) {
     return (
-        <button>{children}</button>
+        <a href={link} target="_blank" className={s.button}>
+            <button>
+                {children}
+            </button>
+        </a>
     )
 }

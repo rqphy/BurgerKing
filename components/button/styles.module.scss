@@ -1,3 +1,49 @@
 @import "@styles/theme.scss";
 
 // Your style here
+.button {
+    position: relative;
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+    background-color: $color-secondary;
+    border-radius: 5rem;
+    overflow: hidden;
+    
+    button {
+        position: relative;
+        padding: 1.2rem 5rem;
+        border: none;
+        color: $color-white;
+        background: none;
+        transition: color .3s ease-out;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 30rem;
+        width: 30rem;
+        border-radius: 50%;
+        background-color: $color-white;
+        transform: translate3d(-50%, -50%, 0) scale(0);
+        transition: transform .3s ease-out;
+        pointer-events: none;
+    }
+    
+    &:hover {
+
+        button {
+            color: $color-secondary;
+        }
+        
+        &::before {
+            transform: translate3d(-50%, -50%, 0) scale(1);
+        }
+    }
+}
