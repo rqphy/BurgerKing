@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import { MenuElement, Footer } from '@components'
+import { MenuElement, Footer, Header } from '@components'
 import { IProduct } from '@interfaces'
 
 const data: IProduct[] = [
@@ -38,6 +38,7 @@ const Home: NextPage = () => {
             <Head>
             <title>Burger King Remastered</title>
             </Head>
+            <Header />
             {
                 fetchedData?.map((product, index) =>
                 (
