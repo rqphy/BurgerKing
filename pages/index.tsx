@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useState, useEffect } from 'react'
-import { MenuElement } from '@components'
+import { MenuElement, Footer } from '@components'
 import { IProduct } from '@interfaces'
 
 const data: IProduct[] = [
@@ -44,6 +44,7 @@ const Home: NextPage = () => {
                     <MenuElement product={product} key={index}/>
                 ))
             }
+            <Footer/>
         </>
     )
 }
