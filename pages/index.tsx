@@ -36,7 +36,7 @@ const Home: NextPage = () => {
     return (
         <>
             <Head>
-            <title> Simple title </title>
+            <title>Burger King Remastered</title>
             </Head>
             {
                 fetchedData?.map((product) =>
