@@ -39,9 +39,9 @@ const Home: NextPage = () => {
             <title>Burger King Remastered</title>
             </Head>
             {
-                fetchedData?.map((product) =>
+                fetchedData?.map((product, index) =>
                 (
-                    <MenuElement product={product}/>
+                    <MenuElement product={product} key={index}/>
                 ))
             }
         </>

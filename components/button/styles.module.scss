@@ -12,11 +12,14 @@
     overflow: hidden;
     
     button {
+        @include typo-cta;
         position: relative;
         padding: 1.2rem 5rem;
         border: none;
         color: $color-white;
         background: none;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
         transition: color .3s ease-out;
         cursor: pointer;
         z-index: 2;

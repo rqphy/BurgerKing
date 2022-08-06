@@ -17,11 +17,14 @@
         grid-column-end: 4;
 
         h2 {
-            font-size: 6.8rem;
+            @include typo-heading;
+            text-transform: uppercase;
+            color: $color-secondary;
         }
-
+        
         p {
-            font-size: 2rem;
+            @include typo-paragraph;
+            width: 70%;
             margin-top: 1.6rem;
         }
 

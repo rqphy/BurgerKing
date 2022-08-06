@@ -1,0 +1,15 @@
+@mixin typo-heading {
+    font-size: 6.8rem;
+    font-family: $font-bertho;
+    font-weight: 400;
+}
+@mixin typo-paragraph {
+    font-size: 2rem;
+    font-family: $font-roboto;
+    font-weight: 400;
+}
+@mixin typo-cta {
+    font-size: 1.6rem;
+    font-family: $font-bertho;
+    font-weight: 400;
+}
