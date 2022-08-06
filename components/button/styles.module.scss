@@ -20,7 +20,6 @@
         background: none;
         text-transform: uppercase;
         letter-spacing: .1rem;
-        transition: color .3s ease-out;
         cursor: pointer;
         z-index: 2;
     }
@@ -33,18 +32,13 @@
         height: 30rem;
         width: 30rem;
         border-radius: 50%;
-        background-color: $color-white;
+        background-color: $color-main-dark;
         transform: translate3d(-50%, -50%, 0) scale(0);
         transition: transform .3s ease-out;
         pointer-events: none;
     }
     
     &:hover {
-
-        button {
-            color: $color-secondary;
-        }
-        
         &::before {
             transform: translate3d(-50%, -50%, 0) scale(1);
         }
