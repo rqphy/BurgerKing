@@ -1,5 +1,6 @@
 export default interface IProduct {
     title: string,
     description: string,
-    imgSrc: string
+    imgSrc: string,
+    link: string
 }
