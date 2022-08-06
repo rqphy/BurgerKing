@@ -11,6 +11,9 @@ export type IProps = {
 export default function MenuElement ({ product }: IProps) {
     return (
         <section className={s.menu_element}>
+            <div className={s.element__bg}>
+                {product.title}
+            </div>
             <div className={s.element__content}>
                 <h2>{product.title}</h2>
                 <p>{product.description}</p>
