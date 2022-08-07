@@ -36,7 +36,7 @@ const Home: NextPage = () => {
     return (
         <>
             <Head>
-            <title>Burger King Remastered</title>
+                <title>Burger King Remastered</title>
             </Head>
             <Header />
             {
