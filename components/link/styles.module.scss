@@ -1,0 +1,17 @@
+@import "@styles/theme.scss";
+
+// Your style here
+.link {
+    @include typo-cta;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-main-dark;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -6,10 +6,12 @@ import MenuElement from "./menu-element"
 import Button from "./button"
 import Footer from "./footer"
 import Header from "./header"
+import Link from "./link"
 
 export {
     MenuElement,
     Button,
     Footer,
     Header,
+    Link,
 }
