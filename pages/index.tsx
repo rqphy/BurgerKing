@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { MenuElement, Footer, Header } from '@components'
 import { IProduct } from '@interfaces'
 
@@ -10,6 +10,7 @@ const data: IProduct[] = [
 
 const Home: NextPage = () => {
     const [fetchedData, setFetchedData] = useState<any[]>([])
+    const myRef = useRef(null)
 
     const fetchData = () =>
     {
@@ -33,19 +34,29 @@ const Home: NextPage = () => {
         fetchData()
     }, [])
 
+    const handleMainClick = ():void =>
+    {
+        console.log('clicked')
+        myRef?.current.scrollIntoView()
+
+    }
+
     return (
         <>
             <Head>
                 <title>Burger King Remastered</title>
             </Head>
             <Header />
-            {
-                fetchedData?.map((product, index) =>
-                (
-                    <MenuElement product={product} key={index}/>
-                ))
-            }
-            <Footer/>
+            <main onClick={handleMainClick} >
+                {
+                    fetchedData?.map((product, index) =>
+                    (
+                        <MenuElement product={product} key={index}/>
+                    ))
+                }
+            </main>
+            <div ref={myRef}></div>
+            <Footer />
         </>
     )
 }
