@@ -33,8 +33,8 @@ export default function Footer (props: IProps) {
                 {
                     links.map((link, index) =>
                     (
-                        <li>
-                            <Link label={link.label} to={link.to} icon={link.icon} key={index} />
+                        <li key={index}>
+                            <Link label={link.label} to={link.to} icon={link.icon} />
                         </li>
                     ))
                 }
