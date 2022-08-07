@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, ReactNode } from 'react'
 import { MenuElement, Footer, Header } from '@components'
 import { IProduct } from '@interfaces'
 
@@ -10,7 +10,7 @@ const data: IProduct[] = [
 
 const Home: NextPage = () => {
     const [fetchedData, setFetchedData] = useState<any[]>([])
-    const myRef = useRef(null)
+    const myRef = useRef<any>(null)
 
     const fetchData = () =>
     {
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
     const handleMainClick = ():void =>
     {
         console.log('clicked')
-        myRef?.current.scrollIntoView()
+        myRef.current?.scrollIntoView()
 
     }
 
