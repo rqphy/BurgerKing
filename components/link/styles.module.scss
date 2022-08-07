@@ -11,6 +11,10 @@
     text-transform: uppercase;
     color: $color-main-dark;
 
+    div {
+        margin-right: 1rem;
+    }
+
     &:hover {
         text-decoration: underline;
     }

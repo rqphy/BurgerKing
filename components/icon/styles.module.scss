@@ -1,0 +1,37 @@
+@import "@styles/theme.scss";
+
+// Your style here
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.main-dark {
+    svg, path, circle, rect {
+        fill: $color-main-dark;
+        stroke: $color-main-dark;
+    }
+}  
+  
+.main-light {
+    svg, path, circle, rect {
+        fill: $color-main-light;
+        stroke: $color-main-light;
+    }
+}  
+  
+.secondary {
+    svg, path, circle, rect {
+        fill: $color-secondary;
+        stroke: $color-secondary;
+    }
+}  
+  
+.white {
+    svg, path, circle, rect {
+        fill: $color-white;
+        stroke: $color-white;
+    }
+}  

@@ -11,15 +11,18 @@ export type IProps = {
 const links: ILink[] = [
     {
         to: 'https://google.com',
-        label: 'Github'
+        label: 'Github',
+        icon: 'github'
     },
     {
         to: 'https://google.com',
-        label: 'Made by Raphaël'
+        label: 'Made by Raphaël',
+        icon: 'copyright',
     },
     {
         to: 'https://google.com',
-        label: 'Original'
+        label: 'Original',
+        icon: 'source',
     },
 ]
 
@@ -31,7 +34,7 @@ export default function Footer (props: IProps) {
                     links.map((link, index) =>
                     (
                         <li>
-                            <Link label={link.label} to={link.to} key={index} />
+                            <Link label={link.label} to={link.to} icon={link.icon} key={index} />
                         </li>
                     ))
                 }

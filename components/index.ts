@@ -7,6 +7,7 @@ import Button from "./button"
 import Footer from "./footer"
 import Header from "./header"
 import Link from "./link"
+import Icon from "./icon"
 
 export {
     MenuElement,
@@ -14,4 +15,5 @@ export {
     Footer,
     Header,
     Link,
+    Icon,
 }
