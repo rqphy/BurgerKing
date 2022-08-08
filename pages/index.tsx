@@ -10,7 +10,8 @@ const data: IProduct[] = [
 
 const Home: NextPage = () => {
     const [fetchedData, setFetchedData] = useState<any[]>([])
-    const myRef = useRef<any>(null)
+    const [currentSectionIndex, setCurrentSectionIndex] = useState<number>(0)
+    const sectionsRef = useRef<Array<HTMLDivElement | null>>([])
 
     const fetchData = () =>
     {
@@ -20,7 +21,6 @@ const Home: NextPage = () => {
                 'Accept': 'application/json'
             }
         })
-        // .then(res => console.log(res))
         .then(res => res.json())
         .then(data => 
         {
@@ -34,11 +34,20 @@ const Home: NextPage = () => {
         fetchData()
     }, [])
 
+    useEffect(() =>
+    {
+        scrollTo(currentSectionIndex)
+    }, [currentSectionIndex])
+
+    const scrollTo = (index: number) =>
+    {
+        console.log(sectionsRef, currentSectionIndex)
+        sectionsRef.current[index]?.scrollIntoView()
+    }
+
     const handleMainClick = ():void =>
     {
-        console.log('clicked')
-        myRef.current?.scrollIntoView()
-
+        setCurrentSectionIndex(currentSectionIndex + 1)
     }
 
     return (
@@ -51,11 +60,10 @@ const Home: NextPage = () => {
                 {
                     fetchedData?.map((product, index) =>
                     (
-                        <MenuElement product={product} key={index}/>
+                        <MenuElement product={product} key={index} reff={(el: any) => sectionsRef.current[index] = el} />
                     ))
                 }
             </main>
-            <div ref={myRef}></div>
             <Footer />
         </>
     )
