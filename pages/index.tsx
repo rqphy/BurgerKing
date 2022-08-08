@@ -41,7 +41,6 @@ const Home: NextPage = () => {
 
     const scrollTo = (index: number) =>
     {
-        console.log(sectionsRef, currentSectionIndex)
         sectionsRef.current[index]?.scrollIntoView()
     }
 
