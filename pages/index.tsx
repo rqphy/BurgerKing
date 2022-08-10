@@ -29,9 +29,16 @@ const Home: NextPage = () => {
         sectionsRef.current[index]?.scrollIntoView()
     }
 
+    const getNextSectionIndex = () =>
+    {
+        if(currentSectionIndex < sectionsRef.current.length)
+        return setCurrentSectionIndex(currentSectionIndex + 1)
+
+    }
+
     const handleMainClick = ():void =>
     {
-        setCurrentSectionIndex(currentSectionIndex + 1)
+        getNextSectionIndex()
     }
     
     useEffect(() =>
