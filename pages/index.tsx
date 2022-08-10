@@ -1,12 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState, useEffect, useRef, ReactNode } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { MenuElement, Footer, Header } from '@components'
-import { IProduct } from '@interfaces'
-
-const data: IProduct[] = [
-
-]
 
 const Home: NextPage = () => {
     const [fetchedData, setFetchedData] = useState<any[]>([])
@@ -29,16 +24,6 @@ const Home: NextPage = () => {
         })
     }
 
-    useEffect(() =>
-    {
-        fetchData()
-    }, [])
-
-    useEffect(() =>
-    {
-        scrollTo(currentSectionIndex)
-    }, [currentSectionIndex])
-
     const scrollTo = (index: number) =>
     {
         sectionsRef.current[index]?.scrollIntoView()
@@ -48,6 +33,16 @@ const Home: NextPage = () => {
     {
         setCurrentSectionIndex(currentSectionIndex + 1)
     }
+    
+    useEffect(() =>
+    {
+        fetchData()
+    }, [])
+
+    useEffect(() =>
+    {
+        scrollTo(currentSectionIndex)
+    }, [currentSectionIndex])
 
     return (
         <>
