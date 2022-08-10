@@ -27,6 +27,7 @@
         writing-mode: vertical-rl;
         text-orientation: mixed;
         transform: rotate(180deg);
+        pointer-events: none;
     }
 
     .element__content {
