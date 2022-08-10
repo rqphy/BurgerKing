@@ -10,17 +10,17 @@ export type IProps = {
 
 const links: ILink[] = [
     {
-        to: 'https://google.com',
+        to: 'https://github.com/rqphy/BurgerKing',
         label: 'Github',
         icon: 'github'
     },
     {
-        to: 'https://google.com',
+        to: 'https://f-raphael.netlify.app/',
         label: 'Made by Raphaël',
         icon: 'copyright',
     },
     {
-        to: 'https://google.com',
+        to: 'https://www.burgerking.fr/',
         label: 'Original',
         icon: 'source',
     },
