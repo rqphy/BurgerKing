@@ -4,12 +4,12 @@ import cn from "classnames"
 
 export type IProps = {
     children: React.ReactNode,
-    link: string
+    to: string
 }
 
-export default function Button ({ children, link }: IProps) {
+export default function Button ({ children, to }: IProps) {
     return (
-        <a href={link} target="_blank" className={s.button}>
+        <a href={to} target="_blank" className={s.button} rel="noreferrer">
             <button>
                 {children}
             </button>

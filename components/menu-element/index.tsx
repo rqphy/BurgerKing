@@ -19,7 +19,7 @@ export default function MenuElement ({ product, reff }: IProps): ReactElement<IP
                 <h2>{product.title}</h2>
                 <p>{product.description}</p>
                 <div className={s.button}>
-                    <Button link={product.link}>
+                    <Button to={product.link}>
                         En savoir plus
                     </Button>
                 </div>
