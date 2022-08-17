@@ -34,6 +34,9 @@ const links: ILink[] = [
 export default function Header (props: IProps) {
     return (
         <header className={s.header}>
+            <div className={s.icon}>
+                <Button to={links[0].to}>Commander</Button>
+            </div>
             <ul className={s.links}>
                 {
                     links.map((link, index) =>
@@ -44,7 +47,9 @@ export default function Header (props: IProps) {
                     ))
                 }
             </ul>
-            <Button to={links[0].to}>Commander</Button>
+            <div className={s.button}>
+                <Button to={links[0].to}>Commander</Button>
+            </div>
         </header>
     )
 }
