@@ -6,6 +6,7 @@ import { IconType, IconSize, Color } from '@types'
 import Github from "./github"
 import Copyright from "./copyright"
 import Source from "./source"
+import Bk from "./bk"
 
 interface IProps {
     type: IconType
@@ -21,6 +22,7 @@ const Icons: IIcons = {
     github: <Github />,
     copyright: <Copyright />,
     source: <Source />,
+    bk: <Bk />,
 }
 
 const sizes: any = {

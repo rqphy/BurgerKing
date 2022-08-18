@@ -3,6 +3,7 @@ export type IconType =
     | "github"
     | "copyright"
     | "source"
+    | "bk"
 
 export type IconSize =
     | "none"
