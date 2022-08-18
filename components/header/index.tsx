@@ -1,7 +1,7 @@
 import React from "react"
 import s from "./styles.module.scss"
 import cn from "classnames"
-import { Link, Button } from '@components'
+import { Link, Button, Icon } from '@components'
 import { ILink } from '@interfaces'
 
 export type IProps = {
@@ -34,9 +34,9 @@ const links: ILink[] = [
 export default function Header (props: IProps) {
     return (
         <header className={s.header}>
-            <div className={s.icon}>
-                <Button to={links[0].to}>Commander</Button>
-            </div>
+            <a className={s.icon} href={links[0].to} target="_blank" rel="noreferrer">
+                <Icon size="large" type="bk" />
+            </a>
             <ul className={s.links}>
                 {
                     links.map((link, index) =>
