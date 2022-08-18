@@ -8,6 +8,7 @@ export type IconType =
 export type IconSize =
     | "none"
     | "medium"
+    | "large"
 
 export type Color =
     | "main-dark"

@@ -28,6 +28,7 @@ const Icons: IIcons = {
 const sizes: any = {
     none: "unset",
     medium: "2rem",
+    large: "4.8rem",
 }
 
 export default function Icon ({
