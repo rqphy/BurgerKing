@@ -1,12 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { MenuElement, Footer, Header } from '@components'
 
 const Home: NextPage = () => {
     const [fetchedData, setFetchedData] = useState<any[]>([])
     const [currentSectionIndex, setCurrentSectionIndex] = useState<number>(0)
     const sectionsRef = useRef<Array<HTMLDivElement | null>>([])
+    const timerRef = useRef<any>(null)
 
     const fetchData = () =>
     {
@@ -31,24 +32,48 @@ const Home: NextPage = () => {
 
     const getNextSectionIndex = () =>
     {
-        if(currentSectionIndex < sectionsRef.current.length)
+        if(currentSectionIndex > sectionsRef.current.length - 1) return
+        console.log('DOWN')
         return setCurrentSectionIndex(currentSectionIndex + 1)
-
     }
 
-    const handleMainClick = ():void =>
+    const getPrevSectionIndex = () =>
     {
-        getNextSectionIndex()
+        if(currentSectionIndex < 1) return
+        console.log('UP')
+        return setCurrentSectionIndex(currentSectionIndex - 1)
+    }
+
+    const handlePageScroll = (_event: any):void =>
+    {
+        const scrollYDelta = _event.deltaY
+        const deltaSensitivity = 60
+
+        if(scrollYDelta > deltaSensitivity)
+        {
+            getNextSectionIndex()
+        } else if(scrollYDelta < -deltaSensitivity)
+        {
+            getPrevSectionIndex()
+        }
     }
     
     useEffect(() =>
     {
         fetchData()
+        window.addEventListener('mousewheel', handlePageScroll)
+        return () => clearTimeout(timerRef.current)
     }, [])
 
     useEffect(() =>
     {
         scrollTo(currentSectionIndex)
+
+        window.removeEventListener('mousewheel', handlePageScroll)
+        timerRef.current = setTimeout(() => {
+            window.addEventListener('mousewheel', handlePageScroll)
+            console.log('timeout')
+        }, 1000);
     }, [currentSectionIndex])
 
     return (
@@ -57,7 +82,7 @@ const Home: NextPage = () => {
                 <title>Burger King Remastered</title>
             </Head>
             <Header />
-            <main onClick={handleMainClick} >
+            <main>
                 {
                     fetchedData?.map((product, index) =>
                     (
