@@ -33,14 +33,12 @@ const Home: NextPage = () => {
     const getNextSectionIndex = () =>
     {
         if(currentSectionIndex > sectionsRef.current.length - 1) return
-        console.log('DOWN')
         return setCurrentSectionIndex(currentSectionIndex + 1)
     }
 
     const getPrevSectionIndex = () =>
     {
         if(currentSectionIndex < 1) return
-        console.log('UP')
         return setCurrentSectionIndex(currentSectionIndex - 1)
     }
 
@@ -72,7 +70,6 @@ const Home: NextPage = () => {
         window.removeEventListener('mousewheel', handlePageScroll)
         timerRef.current = setTimeout(() => {
             window.addEventListener('mousewheel', handlePageScroll)
-            console.log('timeout')
         }, 1000);
     }, [currentSectionIndex])
 
