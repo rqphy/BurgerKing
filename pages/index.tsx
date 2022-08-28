@@ -59,7 +59,7 @@ const Home: NextPage = () => {
     useEffect(() =>
     {
         fetchData()
-        window.addEventListener('mousewheel', handlePageScroll)
+        window.addEventListener('wheel', handlePageScroll)
         return () => clearTimeout(timerRef.current)
     }, [])
 
@@ -67,9 +67,9 @@ const Home: NextPage = () => {
     {
         scrollTo(currentSectionIndex)
 
-        window.removeEventListener('mousewheel', handlePageScroll)
+        window.removeEventListener('wheel', handlePageScroll)
         timerRef.current = setTimeout(() => {
-            window.addEventListener('mousewheel', handlePageScroll)
+            window.addEventListener('wheel', handlePageScroll)
         }, 1000);
     }, [currentSectionIndex])
 
