@@ -19,3 +19,9 @@
         @content;
     }
 }
+
+@mixin mq-small {
+    @media (max-width: 700px) {
+        @content;
+    }
+}

@@ -14,14 +14,22 @@
     z-index: 100;
 
     .links {
-        $num-of-links: 5;
+        --num-of-links: 5;
         height: 100%;
         display: grid;
-        grid-template-columns: repeat($num-of-links, 1fr);
+        grid-template-columns: repeat(var(--num-of-links), 1fr);
         grid-template-rows: 100%;
         justify-content: center;
         justify-items: center;
         gap: 2rem;
+
+        @include mq-medium {
+            --num-of-links: 3;
+
+            li:nth-child(2n) {
+                display: none;
+            }
+        }
 
         li {
             height: 100%;
