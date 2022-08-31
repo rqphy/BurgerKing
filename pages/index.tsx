@@ -55,6 +55,14 @@ const Home: NextPage = () => {
             getPrevSectionIndex()
         }
     }
+
+    const handlePaginationClick = (index: number) =>
+    {
+        console.log(index, currentSectionIndex)
+        if(currentSectionIndex === index) return
+        console.log('move')
+        setCurrentSectionIndex(index)
+    }
     
     useEffect(() =>
     {
@@ -96,7 +104,8 @@ const Home: NextPage = () => {
                     {
                         fetchedData?.map((product, index) =>
                         (
-                            <div></div>
+                            // <div></div>
+                            <div onClick={() => handlePaginationClick(index)} key={index} ></div>
                         ))
                     }
                 </Scrollbar>
