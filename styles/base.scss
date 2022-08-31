@@ -1,10 +1,12 @@
-html, body{
-  font-size: 10px;
+@import './theme.scss';
+
+html, body {
+    font-size: 10px;
 }
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  overflow: hidden;
+    overflow: hidden;
 }

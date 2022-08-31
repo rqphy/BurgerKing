@@ -13,3 +13,9 @@
     font-family: $font-bertho;
     font-weight: 400;
 }
+
+@mixin mq-medium {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
