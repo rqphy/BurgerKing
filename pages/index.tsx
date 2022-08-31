@@ -58,9 +58,7 @@ const Home: NextPage = () => {
 
     const handlePaginationClick = (index: number) =>
     {
-        console.log(index, currentSectionIndex)
         if(currentSectionIndex === index) return
-        console.log('move')
         setCurrentSectionIndex(index)
     }
     
