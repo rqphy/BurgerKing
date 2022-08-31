@@ -19,14 +19,29 @@
         border-radius: 50%;
         border: 1px solid $color-secondary;
         cursor: pointer;
+        transition: background-color .3s ease-out;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+        }
+
+        &::after {
+            $after-size: 70%;
+            top: 50%;
+            left: 50%;
+            height: $after-size;
+            width: $after-size;
+            transform: translate3d(-50%, -50%, 0);
+            border-radius: 50%;
+            background-color: transparent;
+        }
 
         + div {
             $scrollbar-gap: 8rem;
             margin-top: $scrollbar-gap;
 
             &::before {
-                content: '';
-                position: absolute;
                 top: #{$scrollbar-gap * -0.1};
                 left: 50%;
                 height: #{$scrollbar-gap * 0.8};
@@ -37,7 +52,7 @@
             }
         }
 
-        &.active {
+        &.active::after {
             background-color: $color-secondary;
         }
     }
