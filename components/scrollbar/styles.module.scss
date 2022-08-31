@@ -2,7 +2,7 @@
 
 // Your style here
 .scrollbar {
-    position: absolute;
+    position: fixed;
     right: 9%;
     top: 50%;
     display: flex;
@@ -33,6 +33,7 @@
                 width: 2px;
                 transform: translate3d(-50%, -100%, 0);
                 background-color: $color-secondary;
+                pointer-events: none;
             }
         }
 
