@@ -102,8 +102,8 @@ const Home: NextPage = () => {
                     {
                         fetchedData?.map((product, index) =>
                         (
-                            // <div></div>
                             <div onClick={() => handlePaginationClick(index)} key={index} ></div>
+                            // <div className={index === currentSectionIndex ? s.active : ''} onClick={() => handlePaginationClick(index)} key={index} ></div>
                         ))
                     }
                 </Scrollbar>
