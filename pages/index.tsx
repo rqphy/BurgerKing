@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import React, { useState, useEffect, useRef } from 'react'
-import { MenuElement, Footer, Header } from '@components'
+import { MenuElement, Footer, Header, Scrollbar } from '@components'
 
 const Home: NextPage = () => {
     const [fetchedData, setFetchedData] = useState<any[]>([])
@@ -92,6 +92,14 @@ const Home: NextPage = () => {
                         <MenuElement product={product} key={index} reff={(el: any) => sectionsRef.current[index] = el} />
                     ))
                 }
+                <Scrollbar>
+                    {
+                        fetchedData?.map((product, index) =>
+                        (
+                            <div></div>
+                        ))
+                    }
+                </Scrollbar>
             </main>
             <Footer />
         </>

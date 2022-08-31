@@ -1,0 +1,43 @@
+@import "@styles/theme.scss";
+
+// Your style here
+.scrollbar {
+    position: absolute;
+    right: 9%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 60vh;
+    width: 20px;
+    transform: translate3d(0, -50%, 0);
+
+    div {
+        position: relative;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        border: 1px solid $color-secondary;
+        cursor: pointer;
+
+        + div {
+            $scrollbar-gap: 8rem;
+            margin-top: $scrollbar-gap;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: #{$scrollbar-gap * -0.1};
+                left: 50%;
+                height: #{$scrollbar-gap * 0.8};
+                width: 2px;
+                transform: translate3d(-50%, -100%, 0);
+                background-color: $color-secondary;
+            }
+        }
+
+        &.active {
+            background-color: $color-secondary;
+        }
+    }
+}

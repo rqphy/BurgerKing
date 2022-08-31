@@ -8,6 +8,7 @@ import Footer from "./footer"
 import Header from "./header"
 import Link from "./link"
 import Icon from "./icon"
+import Scrollbar from "./scrollbar"
 
 export {
     MenuElement,
@@ -16,4 +17,5 @@ export {
     Header,
     Link,
     Icon,
+    Scrollbar,
 }
