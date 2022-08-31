@@ -3,13 +3,24 @@ import s from "./styles.module.scss"
 import cn from "classnames"
 
 export type IProps = {
-    children: any
+    children: any,
+    activeIndex: number
 }
 
-export default function Scrollbar ({ children }: IProps) {
+export default function Scrollbar ({ children,  activeIndex }: IProps) {
     return (
         <aside className={s.scrollbar}>
-            { children }
+            { 
+                children.map((child: any, index: number) =>
+                (
+                    React.cloneElement(
+                        child,
+                        {
+                            className: index == activeIndex ? s.active : ''
+                        }
+                    )
+                ))
+            }
         </aside>
     )
 }

@@ -98,7 +98,7 @@ const Home: NextPage = () => {
                         <MenuElement product={product} key={index} reff={(el: any) => sectionsRef.current[index] = el} />
                     ))
                 }
-                <Scrollbar>
+                <Scrollbar activeIndex={currentSectionIndex}>
                     {
                         fetchedData?.map((product, index) =>
                         (
