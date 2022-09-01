@@ -14,6 +14,13 @@
     background-color: $color-main-light;
     overflow: hidden;
 
+    @include portrait {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
     .element__bg {
         @include typo-heading;
         position: absolute;
@@ -35,10 +42,22 @@
         grid-column-end: 4;
         z-index: 2;
 
+        @include portrait {
+            max-width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
         h2 {
             @include typo-heading;
             text-transform: uppercase;
             color: $color-secondary;
+
+            @include portrait {
+                width: fit-content;
+            }
         }
         
         p {
@@ -58,6 +77,11 @@
         grid-column-end: 8;
         // height: 400px;
         z-index: 2;
+
+        @include portrait {
+            width: auto;
+            flex-grow: 1;
+        }
 
         img {
             height: 100%;
