@@ -11,6 +11,7 @@
     max-height: 60vh;
     width: 20px;
     transform: translate3d(0, -50%, 0);
+    z-index: 100;
 
     div {
         position: relative;
